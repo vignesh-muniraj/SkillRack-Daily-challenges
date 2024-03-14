@@ -1,0 +1,34 @@
+
+14/2/2024
+DAILY CHALLENGE
+
+ProgramID- 10786
+SkillRack
+
+Integer - Exactly Three Digits
+The program must accept an integer N as the input. The program must print yes if exactly three digits are used to form the integer N. Else the program must print no as the output.
+
+Example Input/Output 1:
+Input: 1221255
+Output:
+yes
+Explanation:
+Here the integer 1221255 is formed using exactly three digits 1, 2 and 5.
+
+Code:
+import java.util.*;
+  class Solution {
+    public Static void main(String args[]) {
+        Scannner sc=new Scanner(System.in)
+        String s=sc.nextLine();
+            Set<Character> set =new HashSet<>();
+         for(int i=0;i<s.length();i++)
+         {
+            set.add(s.charAt(i));         
+          }
+        if(set.size()!=3)
+        System.out.println("no");
+        else
+        System.out.println("yes");
+     }
+}
