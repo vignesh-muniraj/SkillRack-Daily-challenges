@@ -65,3 +65,52 @@ for(int i=0;i<s.length();i++){
 System.out.println(s1);
 }
  }
+
+
+
+22/3/24
+
+The program must accept N distinct integers as the input. The program must print the positions of the smallest and the largest integer among the N integers as the output.
+Boundary Condition(s):
+2 <= N <= 100
+1 <= Each integer value <= 1000
+Input Format:
+The first line contains N.
+The second line contains N integers separated by a space.
+Output Format:
+The first line contains the positions of the smallest and the largest integer among the N integers.
+Example Input/Output 1:
+Input:
+10
+18 89 5 9 74 69 59 40 27 93
+Output:
+3 10
+Explanation:
+The smallest integer among the 10 integers is 5. The integer 5 is present in the 3rd position. The largest integer among the 10 integers is 93. The integer 93 is present in the 10th position. So 3 and 10 are printed.
+ CODE:
+import java.util.*;
+public class Hello {
+public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int arr[]=new int[n];
+for(int i=0;i<n;i++){
+arr[i]=sc.nextInt();
+}
+int max=Integer.MIN_VALUE;
+int min=Integer.MAX_VALUE;
+int s=0;
+int 1=0;
+for(int i=0;i<n;i++){
+if(arr[i]>max) {
+max=arr[i];
+l=i;
+}
+if(arr[i]<min){
+min=arr[i];
+s=i;
+}
+}
+System.out.println(1+" "+s);
+}
+}
